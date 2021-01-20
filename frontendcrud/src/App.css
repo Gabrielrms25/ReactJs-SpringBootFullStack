@@ -31,6 +31,20 @@
   color: #61dafb;
 }
 
+th{
+  background-color: #61dafb;
+  border-radius: 40px;
+}
+
+h2{
+  
+  background-color: rgb(43, 226, 125);
+  border-radius: 40px;
+}
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
