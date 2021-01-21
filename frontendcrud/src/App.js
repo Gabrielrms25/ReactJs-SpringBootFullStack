@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ListEmployeeComponent from './components/ListEmployeeComponent';
+import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 
 function App() {
 
@@ -13,11 +14,12 @@ return (
           <HeaderComponent/>
 
              <div className="App">
-               <Switch> http://localhost:3000/employees
-                  <Route path = "/" component={ListEmployeeComponent}></Route>
+               <Switch> 
+                  <Route path = "/"exact component={ListEmployeeComponent}></Route>
                   <Route path = "/employees" component={ListEmployeeComponent}></Route>
+                  <Route path="/add-employee" component={CreateEmployeeComponent}></Route>
                   <ListEmployeeComponent/>
-              </Switch> 
+               </Switch> 
              </div>
 
            <FooterComponent/>
