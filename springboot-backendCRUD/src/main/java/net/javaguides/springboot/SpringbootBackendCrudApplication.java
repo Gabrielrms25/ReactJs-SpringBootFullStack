@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 
-
 @SpringBootApplication
 @ComponentScan(basePackages = {"net.javaguides.springboot.controller"})
 public class SpringbootBackendCrudApplication {
