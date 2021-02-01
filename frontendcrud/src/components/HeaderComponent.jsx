@@ -15,7 +15,7 @@ class HeaderComponent extends Component {
 
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div> <a href="https://javaguides.net" className="navbar-brand">Employee Management </a> </div>
+                    <div> <a href="http://localhost:3000/employees" className="navbar-brand">Employee Management </a> </div>
                     </nav>
                 </header>   
 
@@ -24,4 +24,4 @@ class HeaderComponent extends Component {
     }
 }
 
-export default HeaderComponent;
+export default HeaderComponent

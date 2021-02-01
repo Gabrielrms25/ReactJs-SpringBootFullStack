@@ -6,14 +6,13 @@ class UpdateEmployeeComponent extends Component {
         super(props)
 
         this.state = {
-            id:this.props.match.params.id,
+            id: this.props.match.params.id,
             firstName:'',
             lastName:'',
             emailId:''
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
-        //this.changeEmailIdHandler = this.changeEmailIdHandler.bind(this);
         this.updateEmployee = this.updateEmployee.bind(this);
     }
 
@@ -33,7 +32,11 @@ class UpdateEmployeeComponent extends Component {
         e.preventDefault();
         let employee = {firstName:this.state.firstName, lastName:this.state.lastName, emailId:this.state.emailId}
         console.log('employee =>' + JSON.stringify(employee));
-        
+        EmployeeService.updateEmployee(employee, this.state.id).then(res =>{
+            this.props.history.push('/employees');
+           
+        });
+        //window.alert('Update successfull')
     }
     
     
@@ -90,21 +93,16 @@ class UpdateEmployeeComponent extends Component {
                                           value={this.state.emailId}
                                           onChange={this.changeEmailIdHandler}/>
                                     </div>
-                                    <button 
-                                        className="btn btn-success" 
-                                        onClick={this.updateEmployee}>Update</button>
-                                    <button 
-                                        className="btn btn-danger" 
-                                        onClick={this.cancel.bind(this)} 
-                                        style={{marginLeft:"10px"}}>Cancel</button>
+                                    <button className="btn btn-success" onClick={this.updateEmployee}>Save</button>
+                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default UpdateEmployeeComponent;
+export default UpdateEmployeeComponent
