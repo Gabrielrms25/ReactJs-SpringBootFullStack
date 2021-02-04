@@ -16,7 +16,6 @@ class CreateEmployeeComponent extends Component {
         this.saveOrUpdateEmployee = this.saveOrUpdateEmployee.bind(this);
     }
 
-
     componentDidMount(){
 
         if(this.state.id === '_add'){

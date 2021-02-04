@@ -9,15 +9,12 @@ class ViewEmployeeComponent extends Component {
             id: this.props.match.params.id,
             employee: {}
         }
-
     }
-
     componentDidMount(){
         EmployeeService.getEmployeeById(this.state.id).then(res => {
             this.setState({employee: res.data});
         });
     }
-
     render() {
         return (
             <div>

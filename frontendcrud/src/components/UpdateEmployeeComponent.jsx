@@ -27,7 +27,6 @@ class UpdateEmployeeComponent extends Component {
         });
     }
 
-
     updateEmployee = (e) =>{
         e.preventDefault();
         let employee = {firstName:this.state.firstName, lastName:this.state.lastName, emailId:this.state.emailId}
@@ -38,7 +37,6 @@ class UpdateEmployeeComponent extends Component {
         });
         //window.alert('Update successfull')
     }
-    
     
     changeFirstNameHandler = (event) => {
         this.setState({firstName:event.target.value});
